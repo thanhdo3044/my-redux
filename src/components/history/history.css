@@ -1,0 +1,21 @@
+.show {
+    background-color: antiquewhite;
+    width: 400px;
+
+}
+
+.hide {
+    display: none;
+}
+
+.title-history {
+    font-size: 30px;
+    text-align: center;
+}
+
+.body-data {
+    display: flex;
+    border-top: 1px solid rgba(204, 204, 204, 0.541);
+    padding-left: 35px;
+    top: 0;
+}

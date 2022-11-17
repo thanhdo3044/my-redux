@@ -1,11 +1,13 @@
 import "./keypad.css"
 import Button from '../button/button.js'
-import { filtersRedcer } from '../../reducer/index'
 
+
+import { filtersRedcer } from '../../reducer/index'
 import { useDispatch } from "react-redux";
 
 
 function Keypad() {
+
     const dispatch = useDispatch();
     const handleClickNumber = (num) => {
         dispatch(filtersRedcer.actions.ADD(num));
@@ -15,12 +17,16 @@ function Keypad() {
     }
     const handleClickEquals = (equals) => {
         dispatch(filtersRedcer.actions.EQUALS(equals))
+        dispatch(filtersRedcer.actions.HISTORY(equals))
     }
     const handleClickClears = (clears) => {
         dispatch(filtersRedcer.actions.CLEARS(clears))
     }
     const handleClickDeletes = (deletes) => {
         dispatch(filtersRedcer.actions.DELETE(deletes))
+    }
+    const handleClickHistory = (history) => {
+        dispatch(filtersRedcer.actions.SHOW_HISTORY())
     }
 
 
@@ -29,6 +35,7 @@ function Keypad() {
             <div className="btn-1">
                 <Button button={"C"} id="w" onClick={() => handleClickDeletes("C")} />
                 <Button button={"AC"} id="w" onClick={() => handleClickClears("AC")} />
+                <Button button={"HS"} id="w" onClick={() => handleClickHistory("HS")} />
             </div>
             <div className="btn-1">
                 <Button button={7} value={7} onClick={() => handleClickNumber(7)} />

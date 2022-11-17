@@ -6,9 +6,9 @@ export const filtersRedcer = createSlice({
     name: 'filters',
     initialState: {
         search: '',
-        status: 'all',
         history: [],
         result: 0,
+        showHistory: false,
     },
     reducers: {
         ADD: (state, action) => {
@@ -40,7 +40,14 @@ export const filtersRedcer = createSlice({
         },
         DELETE: (state, action) => {
             state.search = state.search.slice(0, state.search.length - 1);
+        },
+        HISTORY: (state, action) => {
+            state.history.push(`${state.search}=${state.result}`)
+        },
+        SHOW_HISTORY: (state, action) => {
+            state.showHistory = !state.showHistory;
         }
+
 
     }
 })

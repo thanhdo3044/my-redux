@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Display from '../components/display/display';
+import History from '../components/history/history';
 import Keypad from '../components/keypad/keypad';
 import './calculator.css'
 
@@ -8,6 +9,9 @@ class Calculator extends Component {
         return (
             <>
                 <div className='body'>
+                    <div>
+                        <History />
+                    </div>
                     <div className='border'>
                         <div className='name'>
                             <h1>Calculator ThanhDo</h1>
