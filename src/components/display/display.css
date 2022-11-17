@@ -1,0 +1,24 @@
+.in {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 5px;
+
+    height: 50px;
+}
+
+.in>input,
+input[type=text]:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 30px;
+    background-color: transparent;
+    width: 98%;
+}
+
+.out {
+    text-align: end;
+    font-size: 30px;
+    padding-right: 10px;
+    margin-top: 10%;
+}

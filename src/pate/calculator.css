@@ -1,0 +1,30 @@
+.body {
+    margin-top: 5%;
+}
+
+.name {
+    text-align: center;
+}
+
+.border {
+    border: 3px solid #000;
+    max-width: 540px;
+    height: 780px;
+    border-radius: 5%;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+.output {
+    margin: auto;
+    width: 90%;
+    height: 150px;
+    border: 1px solid #000;
+    background-color: beige;
+}
+
+
+.input {
+    margin: auto;
+    width: 86%;
+}
